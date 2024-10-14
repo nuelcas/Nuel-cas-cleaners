@@ -138,6 +138,7 @@ h2 {
 #map {
   height: 400px;
   width: 50%;
+  border-radius: 10px;
 }
 
 .map-form {
