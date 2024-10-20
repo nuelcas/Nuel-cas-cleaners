@@ -1,33 +1,33 @@
 body {
   margin: 0;
+  padding: 0;
   background-color: rgb(240, 244, 243);
 }
 
 nav {
   background-color: rgb(2, 2, 62);
-
+  display: block;
   height: 55px;
-  position: fixed; /* Fixed position to stick at the top */
-  top: 0; /* Align it at the top */
-  left: 0; /* Align it at the left */
-  width: 100%; /* Make it full-width */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
-/* Style for the unordered list within the navigation bar */
 nav ul {
-  list-style-type: none;
-  margin-top: -30px; /* Set margin to 0 to remove default spacing */
-  padding: 0;
   display: flex;
-  justify-content: flex-end; /* Display menu items at the right */
+  list-style-type: none;
+  margin: 0;
+  margin-top: -30px;
+  padding: 0;
+  justify-content: flex-end;
 }
 
-/* Style for each list item in the navigation bar */
 nav ul li {
   display: inline;
+  margin-left: 20px;
 }
 
-/* Style for links within each list item */
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -74,6 +74,12 @@ h2 {
   background-color: rgb(208, 208, 218);
 }
 
+/* #services .container {
+  display: flex;
+  flex-direction: column; 
+  gap: 20px; 
+} */
+
 .services {
   text-align: center;
   margin-top: 100px;
@@ -84,23 +90,19 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1200px; /* Adjust this value to fit your desired width */
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Style for each item (column) inside the container */
 .container > div {
-  flex-basis: calc(
-    33.33% - 20px
-  ); /* 33.33% width for each column with 20px spacing between columns */
-  margin-bottom: 20px; /* Spacing between rows */
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
   padding: 10px;
   box-sizing: border-box;
-  border: 1px solid #ccc; /* Optional: Add a border around each item */
+  border: 1px solid #ccc;
   text-align: center;
 }
 
-/* Adjust the style for headings, images, and paragraphs inside each item if needed */
 .container h3 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -116,6 +118,32 @@ h2 {
 }
 
 #why-choose {
+  /* background-image: url(images/Residential.jpg); */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.choose-us {
+  text-align: center;
+  margin: 0 20px; /* Use smaller margins for smaller screens */
+  margin-bottom: 100px;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  background: white;
+  color: black;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+  .choose-us {
+    margin: 0 10px; /* Further reduce margins on smaller screens */
+    font-size: 16px; /* Optionally reduce font size */
+  }
+}
+
+/* #why-choose {
   background-image: url(images/Residential.jpg);
 }
 
@@ -129,40 +157,38 @@ h2 {
   font-weight: 700;
   background: white;
   color: black;
-}
+} */
 
 #contact {
   background-color: #000000da;
 }
 
-#map {
+/* #map {
   height: 400px;
   width: 50%;
   border-radius: 10px;
-}
+} */
 
 .map-form {
   display: flex;
   flex-direction: row;
   align-items: center;
   margin: 30px;
-  padding-left: 90px;
+  padding-left: 10px;
 }
 
-/* Apply margin to the individual form elements */
 .map-form form input,
 .map-form form textarea {
-  margin: 30px;
+  margin: 10px;
   display: grid;
-  margin-left: 100px;
-  width: 400px;
+  margin-left: 10px;
+  width: 250px;
   resize: none;
   background-color: rgba(0, 0, 0, 0.935);
   color: white;
   border: none;
 }
 
-/* Style the submit button */
 .map-form form .btn2 {
   background-color: rgba(50, 50, 252, 0.331);
   font-size: 18px;
@@ -185,14 +211,14 @@ h2 {
 .mobile {
   display: flex;
   flex-direction: row;
-  margin-left: 90px;
+  margin-left: 10px;
   font-size: 20px;
   color: rgb(248, 246, 245);
 }
 
 .email {
   color: rgb(248, 246, 245);
-  margin-left: 60px;
+  margin-left: 10px;
   font-size: 20px;
 }
 
@@ -212,7 +238,7 @@ h2 {
   display: inline;
   width: 0px;
   height: 30px;
-  margin-left: 50px;
+  margin-right: 25px;
 }
 
 .socials ul i {
@@ -220,8 +246,45 @@ h2 {
 }
 
 .survey a {
-  margin-left: 60px;
+  margin-left: 10px;
   font-size: 20px;
   color: rgb(248, 246, 245);
   text-decoration: none;
+}
+
+/* Default styles for .container divs */
+#services .container {
+  display: flex;
+  flex-direction: column; /* Stack items in a column by default */
+  gap: 20px; /* Optional: space between items */
+}
+
+/* Styles for screens larger than 768px but less than 1200px */
+@media (min-width: 769px) and (max-width: 1199px) {
+  #services .container {
+    flex-direction: row; /* Arrange items in a row */
+    flex-wrap: wrap; /* Allow items to wrap */
+  }
+
+  #services .container > div {
+    flex: 0 0 48%; /* Each item takes up about 48% of the width */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+    margin-bottom: 20px; /* Space between rows */
+  }
+}
+
+/* Styles for screens less than 769px */
+@media (max-width: 1050px) {
+  #services .container {
+    flex-direction: column; /* Stack items in a column */
+  }
+
+  nav {
+    display: none;
+  }
+
+  #services .container > div {
+    flex: 1 1 100%; /* Each item takes full width */
+    box-sizing: border-box; /* Include padding/border in width calculation */
+  }
 }

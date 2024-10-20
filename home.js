@@ -17,22 +17,31 @@ showSlides();
 
 function initMap() {
   // Replace 'LATITUDE' and 'LONGITUDE' with your address coordinates
-  var myLatLng = { lat: 6.547036917547874, lng: 3.2362647197992773 }; 
+  var myLatLng = { lat: 6.547036917547874, lng: 3.2362647197992773 };
 
   // Map options: you can customize these as needed
   var mapOptions = {
-      zoom: 14,
-      center: myLatLng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
+    zoom: 14,
+    center: myLatLng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
   };
 
   // Create the map in the 'map' div
-  var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
   // Add a marker to the map
   var marker = new google.maps.Marker({
-      position: myLatLng,
-      map: map,
-      title: 'My Address'
+    position: myLatLng,
+    map: map,
+    title: "My Address",
   });
 }
+
+// function toggleMenu() {
+//   var navbar = document.getElementById("navbar");
+//   if (navbar.style.display === "block") {
+//     navbar.style.display = "none";
+//   } else {
+//     navbar.style.display = "block";
+//   }
+// }
