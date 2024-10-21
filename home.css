@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(240, 244, 243);
+  background-color: whitesmoke;
 }
 
 nav {
@@ -63,8 +63,8 @@ nav ul li a {
 
 h2 {
   font-family: "lato", sans-serif;
-  font-size: 18px;
-  margin: 20px;
+  font-size: 22px;
+  margin: 18px;
   display: flex;
   text-align: center;
 }
@@ -75,6 +75,7 @@ h2 {
 }
 
 .services {
+  font-family: "lato", sans-serif;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -98,7 +99,8 @@ h2 {
 }
 
 .container h3 {
-  font-size: 20px;
+  font-size: 24px;
+  color: rgb(2, 2, 62);
   margin-bottom: 10px;
 }
 
@@ -108,19 +110,19 @@ h2 {
 }
 
 .container p {
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 #why-choose {
-  /* background-image: url(images/Residential.jpg); */
-  background-size: cover; /* Ensures the image covers the entire area */
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .choose-us {
   text-align: center;
-  margin: 0 20px; /* Use smaller margins for smaller screens */
+  margin: 0 20px;
   margin-bottom: 100px;
   font-family: "Lato", sans-serif;
   font-size: 18px;
@@ -129,18 +131,17 @@ h2 {
   color: black;
 }
 
-/* Media Queries for smaller screens */
 @media (max-width: 768px) {
   .choose-us {
-    margin: 0 10px; /* Further reduce margins on smaller screens */
-    font-size: 16px; /* Optionally reduce font size */
+    margin: 0 10px;
+    font-size: 16px;
   }
 }
 
 .contact-section {
   background-color: black;
   text-align: center;
-  flex-grow: 1; /* Allow the section to grow and take up available space */
+  flex-grow: 1;
 }
 
 .contact-section h1 {
@@ -333,31 +334,28 @@ h2 {
   }
 }
 
-/* Default styles for .container divs */
 #services .container {
   display: flex;
-  flex-direction: column; /* Stack items in a column by default */
-  gap: 20px; /* Optional: space between items */
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Styles for screens larger than 768px but less than 1200px */
 @media (min-width: 769px) and (max-width: 1199px) {
   #services .container {
-    flex-direction: row; /* Arrange items in a row */
-    flex-wrap: wrap; /* Allow items to wrap */
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   #services .container > div {
-    flex: 0 0 48%; /* Each item takes up about 48% of the width */
-    box-sizing: border-box; /* Include padding/border in width calculation */
-    margin-bottom: 20px; /* Space between rows */
+    flex: 0 0 48%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
   }
 }
 
-/* Styles for screens less than 769px */
 @media (max-width: 1050px) {
   #services .container {
-    flex-direction: column; /* Stack items in a column */
+    flex-direction: column;
   }
 
   nav {
@@ -365,7 +363,7 @@ h2 {
   }
 
   #services .container > div {
-    flex: 1 1 100%; /* Each item takes full width */
-    box-sizing: border-box; /* Include padding/border in width calculation */
+    flex: 1 1 100%;
+    box-sizing: border-box;
   }
 }
